@@ -1,6 +1,7 @@
-﻿namespace YandexMusic
+﻿namespace YouTubeMusic
 {
     public class Class1
     {
+        
     }
 }

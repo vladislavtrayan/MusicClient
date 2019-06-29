@@ -4,11 +4,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{E14E7959-F4D1-4BA4-8FF2-860487CCF962}</ProjectGuid>
+        <ProjectGuid>{469FCAAC-A3A7-4113-9E3B-47753EFBBF63}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>YandexMusic</RootNamespace>
-        <AssemblyName>YandexMusic</AssemblyName>
+        <RootNamespace>Core</RootNamespace>
+        <AssemblyName>Core</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -32,32 +32,20 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-          <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
-        <Reference Include="Yandex.Music.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-          <HintPath>..\packages\Yandex.Music.Api.1.0.0\lib\netstandard2.0\Yandex.Music.Api.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="TrackBuilder.cs" />
-        <Compile Include="YandexApi.cs" />
+        <Compile Include="IAuthorize.cs" />
+        <Compile Include="ISoundGround.cs" />
+        <Compile Include="ITrackCollection.cs" />
+        <Compile Include="Models\Album.cs" />
+        <Compile Include="Models\Artist.cs" />
+        <Compile Include="Models\PlayList.cs" />
+        <Compile Include="Models\Track.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <None Include="packages.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\Core\Core.csproj">
-        <Project>{469fcaac-a3a7-4113-9e3b-47753efbbf63}</Project>
-        <Name>Core</Name>
-      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
