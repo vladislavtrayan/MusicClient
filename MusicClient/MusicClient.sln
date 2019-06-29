@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicClient", "MusicClient\MusicClient.csproj", "{4DAA1C56-10A8-4638-BE6E-FB455F9CABBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexMusic", "YandexMusic\YandexMusic.csproj", "{E14E7959-F4D1-4BA4-8FF2-860487CCF962}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DAA1C56-10A8-4638-BE6E-FB455F9CABBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAA1C56-10A8-4638-BE6E-FB455F9CABBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAA1C56-10A8-4638-BE6E-FB455F9CABBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAA1C56-10A8-4638-BE6E-FB455F9CABBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E14E7959-F4D1-4BA4-8FF2-860487CCF962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E14E7959-F4D1-4BA4-8FF2-860487CCF962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E14E7959-F4D1-4BA4-8FF2-860487CCF962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E14E7959-F4D1-4BA4-8FF2-860487CCF962}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
