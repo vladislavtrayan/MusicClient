@@ -24,9 +24,13 @@ namespace YandexMusic
             return this;
         }
 
-        public TrackBuilder SetArtist(List<Artist> artists)
+        public TrackBuilder SetArtist(IEnumerable<Artist> artists)
         {
-            Track.Artists = artists;
+            Track.Artists = new List<Artist>();
+            foreach (var artist in artists)
+            {
+                Track.Artists.Add(artist);
+            }
             return this;
         }
     }

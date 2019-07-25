@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using Core;
+using Core.Interfaces;
 using Core.Models;
 using Yandex.Music.Api;
 using Yandex.Music.Api.Models;
@@ -33,30 +34,52 @@ namespace YandexMusic
             return new TrackBuilder().SetTitle(track.Title).SetArtist(artists).Build();
         }
 
-
-        public Track GetTrack()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Album GetAlbum()
+        public Album GetAlbum(string albumName)
         {
             throw new Exception("No realization");
         }
         
-        public PlayList GetPlayList()
+        public PlayList GetPlayList(string playListName)
         {
             throw new Exception("No realization");
         }
         
         public PlayList GetPlayListDeJaVu()
         {
-            throw new Exception("No realization");
+            var playListOfTheDay = Authorize().GetPlaylistDejaVu();
+            var playList = new PlayList();
+            foreach (var track in playListOfTheDay.Tracks)
+            {
+                var artists = new List<Artist>();
+                foreach (var oArtist in track.Artists)
+                {
+                    artists.Add(new Artist {Name = oArtist.Name});
+                }
+                playList.Music.Add(new TrackBuilder().SetTitle(track.Title).SetArtist(artists).Build());
+            }
+
+            playList.Title = playListOfTheDay.Title;
+            playList.Author = playListOfTheDay.Owner.Name;
+            return playList;
         }
         
         public PlayList GetPlayOfTheDay()
         {
-            throw new Exception("No realization");
+            var playListOfTheDay = Authorize().GetPlaylistOfDay();
+            var playList = new PlayList();
+            foreach (var track in playListOfTheDay.Tracks)
+            {
+                var artists = new List<Artist>();
+                foreach (var oArtist in track.Artists)
+                {
+                    artists.Add(new Artist {Name = oArtist.Name});
+                }
+                playList.Music.Add(new TrackBuilder().SetTitle(track.Title).SetArtist(artists).Build());
+            }
+
+            playList.Title = playListOfTheDay.Title;
+            playList.Author = playListOfTheDay.Owner.Name;
+            return playList;
         }
 
         private YandexTrack SearchTrack(string trackName,int page)

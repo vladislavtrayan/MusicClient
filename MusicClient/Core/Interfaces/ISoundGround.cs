@@ -1,13 +1,12 @@
 using Core.Models;
 
-namespace Core
+namespace Core.Interfaces
 {
     public interface ISoundGround
     {
         
-        Track GetTrack();
         Track GetTrack(string trackName);
-        Album GetAlbum();
-        PlayList GetPlayList();
+        Album GetAlbum(string albumName);
+        PlayList GetPlayList(string playListName);
     }
 }

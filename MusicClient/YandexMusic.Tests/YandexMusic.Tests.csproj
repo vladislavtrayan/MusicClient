@@ -54,6 +54,7 @@
     <ItemGroup>
         <Compile Include="BaseTest.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="SmokeTests\GetPlayList.cs" />
         <Compile Include="SmokeTests\GetTrack.cs" />
         <Compile Include="SmokeTests\LogIn.cs" />
     </ItemGroup>
