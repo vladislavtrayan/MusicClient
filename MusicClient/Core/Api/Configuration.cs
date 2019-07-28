@@ -6,18 +6,18 @@ namespace Core.Api
     {
         private static string GetEnvironmentVariable(string var, string defaultValue)
         {
-            return ConfigurationManager.AppSettings[var] ?? defaultValue;
+            return  defaultValue;
         }
 
-        public static string BaseUri => GetEnvironmentVariable("Uri",string.Empty);
+        public static string BaseUri => GetEnvironmentVariable("Uri", "https://downloadmusicvk.ru/audio/");
 
         public static string license => GetEnvironmentVariable("License", string.Empty);
         
         public static string AuthorizationUri => GetEnvironmentVariable("AuthorizationUri",string.Empty);
         
-        public static string ShipmentsUriSegment => GetEnvironmentVariable("ShipmentsUriSegment",string.Empty);
+        public static string SearchUriSegment => GetEnvironmentVariable("SearchUriSegment","search");
         
-        public static string LoginUriSegment => GetEnvironmentVariable("LoginUriSegment", string.Empty);
+        public static string DownloadUriSegment => GetEnvironmentVariable("DownloadUriSegment", "download");
 
         public static string RatesInsightCalculatorUri => GetEnvironmentVariable("FreightosRatesUri", string.Empty);
 

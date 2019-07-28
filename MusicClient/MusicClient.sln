@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicClient", "MusicClient\MusicClient.csproj", "{4DAA1C56-10A8-4638-BE6E-FB455F9CABBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexMusic", "YandexMusic\YandexMusic.csproj", "{E14E7959-F4D1-4BA4-8FF2-860487CCF962}"
@@ -11,6 +14,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeMusic", "YouTubeMusic\YouTubeMusic.csproj", "{325D4803-2ECB-4CE5-9D5C-A8D4F89880CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalMusicResource", "ExternalMusicResource\ExternalMusicResource.csproj", "{94611270-D810-4E9C-8617-33E237C28593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Tests", "Core.Tests\Core.Tests.csproj", "{E002F6E4-2F48-44CD-A60F-7B2923E12110}"
+	ProjectSection(ProjectDependencies) = postProject
+		{469FCAAC-A3A7-4113-9E3B-47753EFBBF63} = {469FCAAC-A3A7-4113-9E3B-47753EFBBF63}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +50,15 @@ Global
 		{94611270-D810-4E9C-8617-33E237C28593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94611270-D810-4E9C-8617-33E237C28593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94611270-D810-4E9C-8617-33E237C28593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E002F6E4-2F48-44CD-A60F-7B2923E12110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E002F6E4-2F48-44CD-A60F-7B2923E12110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E002F6E4-2F48-44CD-A60F-7B2923E12110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E002F6E4-2F48-44CD-A60F-7B2923E12110}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50A4955C-3D59-4319-8316-FA5F466C5971}
 	EndGlobalSection
 EndGlobal
